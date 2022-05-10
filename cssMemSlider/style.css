@@ -10,10 +10,12 @@
 /*маштаб по отношению к родительскому элемнту*/
 .Slider .Slide img{
     object-fit: cover;
-    width: 100%;
+    width: 50%;
     height: 300px;
+    margin-left: 400px;
     border: none !important;
     box-shadow: none !important;
+    border-radius: 5px;
 }
 /*botto next and prev*/
 .Slider .prev, .Slider .next {
