@@ -1,5 +1,6 @@
 <!DOCTYPE html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Keyboard</title>
@@ -7,38 +8,34 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="slider-container">
-    <div class="Slider">
-        <div class="Slide">
-            <img src="./5cn9.gif" >
-            <div class="textSlide">I'm best of the best!</div>
-        </div>
-
-        <div class="Slide">
-            <img src="./AjwQ.gif" >
-            <div class="textSlide">I'm best of the best of the best!!!</div>
-        </div>
-
-        <div class="Slide">
-            <img src="./4APT.gif" >
-            <div class="textSlide">Keep goind...I believe in you!</div>
-        </div>
-
-        <div class="Slide">
-            <img src="./5bV7.gif" >
-            <div class="textSlide">Don't stop</div>
-       </div>
-<a class="prev" onclick="minusSlide()">&#10094</a>
-<a class="nex" onclick="plusSlide()">&#10095</a>
-<div class="slide-bottons">
-    <span class="slider-dots_item" onclick="currentSlide(1)"></span>
-    <span class="slider-dots_item" onclick="currentSlide(2)"></span>
-    <span class="slider-dots_item" onclick="currentSlide(3)"></span>
-    <span class="slider-dots_item" onclick="currentSlide(4)"></span>
-        </div>
-    </div>
-    </div>
-</div>
+        <div class="slider">
+            
+            <input type="radio" name="switch" id="btn1" checked>
+            <input type="radio" name="switch" id="btn2">
+            <input type="radio" name="switch" id="btn3">
+            <input type="radio" name="switch" id="btn4" >
+            <input type="radio" name="switch" id="btn5">
+            
+            
+            <div class="switch">
+              <label for="btn1"></label>
+              <label for="btn2"></label>
+              <label for="btn3"></label>
+              <label for="btn4"></label>
+              <label for="btn5"></label>
+            </div>
+            
+            <div class="slider-inner">
+              <div class="slides">
+                <img src="./4APT.gif"/>
+                <img src="./5cn9.gif"/>
+                <img src="./DG.gif"/>
+                <img src="./ZKan.gif"/>
+                <img src="./MLK5.gif"/>
+              </div>
+            </div>
+            
+          </div>
         <script src="script.js" ></script>
     </body>
 </html>
