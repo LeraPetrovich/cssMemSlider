@@ -2,8 +2,8 @@
 
 body {
     background-color: #24292d;
+
   }
-  
   .slider {
     position: relative;
     width: 1350px;
@@ -12,7 +12,7 @@ body {
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
   }
   
-  .slider input[name="switch"] {
+  .slider input[name="r"] {
     display: none;
   }
   
@@ -35,37 +35,40 @@ body {
     background-color: #86c0f6;
   }
   
-  #btn1:checked~.switch label[for="btn1"] {
+  #dots1:checked~.switch label[for="dots1"] {
     border: 2px solid #86c0f6;
     background-color: transparent;
   }
   
-  #btn2:checked~.switch label[for="btn2"] {
+  #dots2:checked~.switch label[for="dots2"] {
     border: 2px solid #86c0f6;
     background-color: transparent;
   }
   
-  #btn3:checked~.switch label[for="btn3"] {
+  #dots3:checked~.switch label[for="dots3"] {
     border: 2px solid #86c0f6;
     background-color: transparent;
   }
-  #btn4:checked~.switch label[for="btn4"] {
-    border: 2px solid #86c0f6;
-    background-color: transparent;
-  }
-  
-  #btn5:checked~.switch label[for="btn5"] {
+  #dots4:checked~.switch label[for="dots4"] {
     border: 2px solid #86c0f6;
     background-color: transparent;
   }
   
+  #dots5:checked~.switch label[for="dots5"] {
+    border: 2px solid #86c0f6;
+    background-color: transparent;
+  }
+ 
+
   
-  .slider-inner {
+  .slider-container {
     overflow: hidden;
   }
+
+ 
   
   .slides {
-    width: 500%;
+    width: 600%;
     transition: all 0.5s;
   }
 
@@ -76,61 +79,63 @@ body {
     border-radius: 7px;
   }
   
-  #btn1:checked~slider-inner slides {
+  #dots1:checked~slider-container slides {
     transform: translate(0);
   }
   
-  #btn2:checked~.slider-inner .slides {
+  #dots2:checked~.slider-container .slides {
     transform: translate(-1350px);
   }
   
-  #btn3:checked~.slider-inner .slides {
+  #dots3:checked~.slider-container .slides {
     transform: translate(-2700px);
   }
-  #btn4:checked~.slider-inner .slides {
+  #dots4:checked~.slider-container .slides {
     transform: translate(-4050px);
   }
   
-  #btn5:checked~.slider-inner .slides {
+  #dots5:checked~.slider-container .slides {
     transform: translate(-5400px);
   }
+
 /*text*/
-  #btn1:checked~text-inner text_slide {
-    transform: translate(0);
-  }
-  
-  #btn2:checked~.text-inner .text_slide {
-    transform: translate(-1350px);
-  }
-  
-  #btn3:checked~.text-inner .text_slide {
-    transform: translate(-2700px);
-  }
-  #btn4:checked~.text-inner .text_slide {
-    transform: translate(-4050px);
-  }
-  
-  #btn5:checked~.text-inner .text_slide{
-    transform: translate(-5400px);
-  }
+#dots1:checked~text-container text_slide {
+  transform: translate(0);
+}
 
-  .text-inner {
-    overflow: hidden;
-    margin-top: 20px;
-  }
-  
-  .text_slide {
-    width: 500%;
-    transition: all 0.5s;
-  }
+#dots2:checked~.text-container .text_slide {
+  transform: translate(-1350px);
+}
 
-  .text {
-    width: 1350px;
-    height: 560px;
-    float: left;
-  font-family: sans-serif;
-  color: #fff;
-  }
+#dots3:checked~.text-container .text_slide {
+  transform: translate(-2700px);
+}
+#dots4:checked~.text-container .text_slide {
+  transform: translate(-4050px);
+}
+
+#dots5:checked~.text-container .text_slide{
+  transform: translate(-5400px);
+}
+
+
+.text-container {
+  overflow: hidden;
+  margin-top: 50px;  /* не работает если на одном уровне с точками, т к они занимают тоже пиксели */
+}
+
+.text_slide {
+  width: 500%;
+  transition: all 0.5s;
+}
+
+.text {
+  width: 1350px;
+  float: left;
+font-family: sans-serif;
+color: #fff;
+}
+
 
   @media (max-height: 568px) and (max-width: 320px) {
     body {
@@ -169,12 +174,12 @@ body {
       border-radius: 50%;
       background-color: #86c0f6;
     }
-    .slider-inner {
+    .slider-container {
       overflow: hidden;
     }
     
     .slides {
-      width: 500%;
+      width: 600%;
       transition: all 0.5s;
     }
   
@@ -184,7 +189,7 @@ body {
       float: left;
       border-radius: 7px;
     }
-    .text-inner {
+    .text-container {
       overflow: hidden;
       margin-top: 80px;
     }
@@ -196,49 +201,51 @@ body {
   
     .text {
       width: 285px;
-      height: 200px;
+    
       float: left;
     font-family: sans-serif;
     color: #fff;
     }
 
-    #btn1:checked~slider-inner slides {
+    #dots1:checked~slider-container slides {
       transform: translate(0);
     }
     
-    #btn2:checked~.slider-inner .slides {
+    #dots2:checked~.slider-container .slides {
       transform: translate(-285px);
     }
     
-    #btn3:checked~.slider-inner .slides {
+    #dots3:checked~.slider-container .slides {
       transform: translate(-570px);
     }
-    #btn4:checked~.slider-inner .slides {
+    #dots4:checked~.slider-container .slides {
       transform: translate(-855px);
     }
     
-    #btn5:checked~.slider-inner .slides {
+    #dots5:checked~.slider-container .slides {
       transform: translate(-1140px);
     }
+  
 
     /*text*/
-    #btn1:checked~text-inner text_slide {
+    #dots1:checked~text-container text_slide {
       transform: translate(0);
     }
     
-    #btn2:checked~.text-inner .text_slide {
+    #dots2:checked~.text-container .text_slide {
       transform: translate(-285px);
     }
     
-    #btn3:checked~.text-inner .text_slide {
+    #dots3:checked~.text-container .text_slide {
       transform: translate(-570px);
     }
-    #btn4:checked~.text-inner .text_slide {
+    #dots4:checked~.text-container .text_slide {
       transform: translate(-855px);
     }
     
-    #btn5:checked~.text-inner .text_slide{
+    #dots5:checked~.text-container .text_slide{
       transform: translate(-1140px);
     }
+   
 
     }
