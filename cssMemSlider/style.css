@@ -104,24 +104,25 @@ body {
 }
 
 #dots2:checked~.text-container .text_slide {
-  transform: translate(-1350px);
+  transform: translate(-900px);
 }
 
 #dots3:checked~.text-container .text_slide {
-  transform: translate(-2700px);
+  transform: translate(-1800px);
 }
 #dots4:checked~.text-container .text_slide {
-  transform: translate(-4050px);
+  transform: translate(-2700px);
 }
 
 #dots5:checked~.text-container .text_slide{
-  transform: translate(-5400px);
+  transform: translate(-3600px);
 }
 
 
 .text-container {
+  width: 900px;
   overflow: hidden;
-  margin-top: 50px;  /* не работает если на одном уровне с точками, т к они занимают тоже пиксели */
+  margin-top: 20px;  /* не работает если на одном уровне с точками, т к они занимают тоже пиксели */
 }
 
 .text_slide {
@@ -130,7 +131,7 @@ body {
 }
 
 .text {
-  width: 1350px;
+  width: 900px;
   float: left;
 font-family: sans-serif;
 color: #fff;
