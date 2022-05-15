@@ -1,0 +1,252 @@
+
+
+body {
+    background-color: #24292d;
+
+  }
+  .slider {
+    position: relative;
+    width: 1350px;
+    height: 560px;
+    margin: 50px auto;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  }
+  
+  .slider input[name="r"] {
+    display: none;
+  }
+  
+  .switch {
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+    text-align:right;
+    width: 100%;
+  }
+  
+  .switch label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    margin: 0 3px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    background-color: #86c0f6;
+  }
+  
+  #dots1:checked~.switch label[for="dots1"] {
+    border: 2px solid #86c0f6;
+    background-color: transparent;
+  }
+  
+  #dots2:checked~.switch label[for="dots2"] {
+    border: 2px solid #86c0f6;
+    background-color: transparent;
+  }
+  
+  #dots3:checked~.switch label[for="dots3"] {
+    border: 2px solid #86c0f6;
+    background-color: transparent;
+  }
+  #dots4:checked~.switch label[for="dots4"] {
+    border: 2px solid #86c0f6;
+    background-color: transparent;
+  }
+  
+  #dots5:checked~.switch label[for="dots5"] {
+    border: 2px solid #86c0f6;
+    background-color: transparent;
+  }
+ 
+
+  
+  .slider-container {
+    overflow: hidden;
+  }
+
+ 
+  
+  .slides {
+    width: 600%;
+    transition: all 0.5s;
+  }
+
+  .slides img {
+    width: 1350px;
+    height: 560px;
+    float: left;
+    border-radius: 7px;
+  }
+  
+  #dots1:checked~slider-container slides {
+    transform: translate(0);
+  }
+  
+  #dots2:checked~.slider-container .slides {
+    transform: translate(-1350px);
+  }
+  
+  #dots3:checked~.slider-container .slides {
+    transform: translate(-2700px);
+  }
+  #dots4:checked~.slider-container .slides {
+    transform: translate(-4050px);
+  }
+  
+  #dots5:checked~.slider-container .slides {
+    transform: translate(-5400px);
+  }
+
+/*text*/
+#dots1:checked~text-container text_slide {
+  transform: translate(0);
+}
+
+#dots2:checked~.text-container .text_slide {
+  transform: translate(-900px);
+}
+
+#dots3:checked~.text-container .text_slide {
+  transform: translate(-1800px);
+}
+#dots4:checked~.text-container .text_slide {
+  transform: translate(-2700px);
+}
+
+#dots5:checked~.text-container .text_slide{
+  transform: translate(-3600px);
+}
+
+
+.text-container {
+  width: 900px;
+  overflow: hidden;
+  margin-top: 20px;  /* не работает если на одном уровне с точками, т к они занимают тоже пиксели */
+}
+
+.text_slide {
+  width: 500%;
+  transition: all 0.5s;
+}
+
+.text {
+  width: 900px;
+  float: left;
+font-family: sans-serif;
+color: #fff;
+}
+
+
+  @media (max-height: 568px) and (max-width: 320px) {
+    body {
+      background-color:white
+    }
+    .slider {
+      position: relative;
+      width: 285px;
+      height: 200px;
+      margin: 50px auto;
+      top: 30px;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+     
+    }
+    .container{
+      background-color: #24292d;
+      width: 305px;
+      height: 585px;
+      margin-top: -50px;
+    }
+    .switch {
+      position: absolute;
+      left: 0;
+      bottom: -70px;
+      text-align:center;
+      width: 100%;
+    }
+    
+    .switch label {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+      margin: 0 3px;
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+      border-radius: 50%;
+      background-color: #86c0f6;
+    }
+    .slider-container {
+      overflow: hidden;
+    }
+    
+    .slides {
+      width: 600%;
+      transition: all 0.5s;
+    }
+  
+    .slides img {
+      width: 285px;
+      height: 200px;
+      float: left;
+      border-radius: 7px;
+    }
+    .text-container {
+      overflow: hidden;
+      margin-top: 80px;
+    }
+    
+    .text_slide {
+      width: 500%;
+      transition: all 0.5s;
+    }
+  
+    .text {
+      width: 285px;
+    
+      float: left;
+    font-family: sans-serif;
+    color: #fff;
+    }
+
+    #dots1:checked~slider-container slides {
+      transform: translate(0);
+    }
+    
+    #dots2:checked~.slider-container .slides {
+      transform: translate(-285px);
+    }
+    
+    #dots3:checked~.slider-container .slides {
+      transform: translate(-570px);
+    }
+    #dots4:checked~.slider-container .slides {
+      transform: translate(-855px);
+    }
+    
+    #dots5:checked~.slider-container .slides {
+      transform: translate(-1140px);
+    }
+  
+
+    /*text*/
+    #dots1:checked~text-container text_slide {
+      transform: translate(0);
+    }
+    
+    #dots2:checked~.text-container .text_slide {
+      transform: translate(-285px);
+    }
+    
+    #dots3:checked~.text-container .text_slide {
+      transform: translate(-570px);
+    }
+    #dots4:checked~.text-container .text_slide {
+      transform: translate(-855px);
+    }
+    
+    #dots5:checked~.text-container .text_slide{
+      transform: translate(-1140px);
+    }
+   
+
+    }
